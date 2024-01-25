@@ -1,0 +1,14 @@
+{
+    "entities": [
+      {
+        "type" : "player",
+        "x" : 2,
+        "y" : 2
+      }, {
+        "type" : "bomb",
+        "x" : 3,
+        "y" : 3
+      }
+    ],
+    "goal-condition": {"goal": "exit"}
+  }

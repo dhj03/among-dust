@@ -1,0 +1,30 @@
+{
+    "entities": [
+        {
+            "type": "player",
+            "x": 0,
+            "y": 0
+        },
+        {
+            "type": "zombie_toast_spawner",
+            "x": 100,
+            "y": 100
+        },
+        {
+            "type": "wall",
+            "x": 101,
+            "y": 100
+        },
+        {
+            "type": "wall",
+            "x": 99,
+            "y": 100
+        },
+        {
+            "type": "wall",
+            "x": 100,
+            "y": 99
+        }
+    ],
+    "goal-condition": {"goal": "exit"}
+}

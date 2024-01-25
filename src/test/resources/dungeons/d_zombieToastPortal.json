@@ -1,0 +1,39 @@
+{
+    "entities": [
+        {
+            "type": "player",
+            "x": 1,
+            "y": 1
+        },
+        {
+            "type": "portal",
+            "x": 1,
+            "y": 0,
+            "colour": "BLUE"
+        },
+        {
+            "type": "portal",
+            "x": -1,
+            "y": 0,
+            "colour": "BLUE"
+        },
+        {
+            "type": "portal",
+            "x": 0,
+            "y": 1,
+            "colour": "RED"
+        },
+        {
+            "type": "portal",
+            "x": 0,
+            "y": -1,
+            "colour": "RED"
+        },
+        {
+            "type": "zombie_toast",
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "goal-condition": {"goal": "exit"}
+}

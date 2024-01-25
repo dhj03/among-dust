@@ -1,0 +1,15 @@
+{
+    "entities": [
+        {
+            "type" : "player",
+            "x" : 0,
+            "y" : 0
+        },
+        {
+            "type": "mercenary",
+            "x": -999,
+            "y": -999
+        }
+    ],
+    "goal-condition": {"goal": "exit"}
+}

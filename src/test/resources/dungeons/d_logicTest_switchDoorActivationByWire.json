@@ -1,0 +1,68 @@
+{
+    "entities": [
+        {
+            "type" : "player",
+            "x" : 0,
+            "y" : 0
+        }, {
+            "type" : "boulder",
+            "x" : 1,
+            "y" : 0
+        }, {
+            "type" : "switch",
+            "x" : 2,
+            "y" : 0
+        }, {
+            "type" : "wire",
+            "x" : 2,
+            "y" : 1
+        }, {
+            "type" : "wire",
+            "x" : 2,
+            "y" : 2
+        }, {
+            "type" : "wire",
+            "x" : 1,
+            "y" : 2
+        }, {
+            "type" : "wire",
+            "x" : 0,
+            "y" : 2
+        }, {
+            "type" : "wire",
+            "x" : -1,
+            "y" : 2
+        }, {
+            "type" : "wire",
+            "x" : -1,
+            "y" : 1
+        }, {
+            "type" : "switch_door",
+            "x" : -1,
+            "y" : 0,
+            "key": 1
+        }, {
+            "type" : "wall",
+            "x" : -2,
+            "y" : 1
+        }, {
+            "type" : "wall",
+            "x" : -2,
+            "y" : -1
+        }, {
+            "type" : "wall",
+            "x" : -3,
+            "y" : 0
+        }, {
+            "type" : "treasure",
+            "x" : -2,
+            "y" : 0
+        }, {
+            "type" : "key",
+            "x" : 0,
+            "y" : -1,
+            "key": 1
+        }
+    ],
+    "goal-condition": {"goal": "exit"}
+}

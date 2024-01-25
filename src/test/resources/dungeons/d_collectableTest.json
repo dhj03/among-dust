@@ -1,0 +1,43 @@
+{
+    "entities": [
+        {
+            "type" : "treasure",
+            "x" : 1,
+            "y" : 1
+        }, {
+            "type" : "key",
+            "x" : 1,
+            "y" : 1,
+            "key": 1
+        }, {
+            "type" : "invincibility_potion",
+            "x" : 1,
+            "y" : 1
+        }, {
+            "type" : "invisibility_potion",
+            "x" : 1,
+            "y" : 1
+        }, {
+            "type" : "wood",
+            "x" : 3,
+            "y" : 1
+        }, {
+            "type" : "arrow",
+            "x" : 1,
+            "y" : 3
+        }, {
+            "type" : "bomb",
+            "x" : 2,
+            "y" : 1
+        }, {
+            "type" : "sword",
+            "x" : 6,
+            "y" : 9
+        }, {
+            "type" : "sword",
+            "x" : 4,
+            "y" : 20
+        }
+    ],
+    "goal-condition": {"goal": "exit"}
+}

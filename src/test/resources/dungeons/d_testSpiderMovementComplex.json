@@ -1,0 +1,54 @@
+{
+    "entities": [
+        {
+            "type" : "player",
+            "x" : 5,
+            "y" : 0
+        },{
+            "type" : "wall",
+            "x" : 1,
+            "y" : 0
+        }, {
+            "type" : "spider",
+            "x" : 0,
+            "y" : 0
+        }, {
+            "type": "exit",
+            "x": 0,
+            "y": 1
+        }, {
+            "type": "portal",
+            "x": 0,
+            "y": -1,
+            "colour": "BLUE"
+        }, {
+            "type": "portal",
+            "x": 0,
+            "y": 5,
+            "colour": "BLUE"
+        }, {
+            "type": "treasure",
+            "x": -1,
+            "y": 0
+        }, {
+            "type": "door",
+            "x": 1,
+            "y": 1,
+            "key": 1
+        }, {
+            "type": "switch",
+            "x": -1,
+            "y": 1
+        }, {
+            "type": "key",
+            "x": 1,
+            "y": -1,
+            "key": 1
+        }, {
+            "type": "boulder",
+            "x": -1,
+            "y": -1
+        }
+    ],
+    "goal-condition": {"goal": "exit"}
+}

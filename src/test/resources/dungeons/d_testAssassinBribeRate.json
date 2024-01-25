@@ -1,0 +1,18 @@
+{
+    "entities": [
+        {
+            "type" : "player",
+            "x" : 0,
+            "y" : 0
+        },{
+            "type" : "treasure",
+            "x" : 1,
+            "y" : 0
+        }, {
+            "type": "assassin",
+            "x" : -2,
+            "y" : 0
+        }
+    ],
+    "goal-condition": {"goal": "exit"}
+}
