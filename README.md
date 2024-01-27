@@ -1,5 +1,16 @@
 # COMP2511 Project: Dungeon Mania
 
+## Disclaimer
+
+Due to an issue with Gradle and JaCoCo, a few lines of code were removed from the `build.gradle` file, in the `jacocoTestReport` section:
+
+```gradle
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+```
+
 ## Contents
 
 This specification is broken into four parts:
