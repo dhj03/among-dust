@@ -11,7 +11,11 @@ This specification is broken into three parts:
 
 # Part I) Introduction
 
-TODO
+This game is based off of the infamous Dungeon Mania (iykyk), stylised in terms of the world-famous Among Us.
+
+The easiest way to run the program is using Visual Studio Code, with the **Extension Pack for Java** and **Gradle for Java** installed. Open your cloned repository in its directory, and click `Run Java` in 'src/main/java/App.java'. A pop-up should appear in your default browser where you can play the game.
+
+If no pop-up appears (as will happen in WSL since there is no `xdg-open`), navigate to `localhost:4568/app/` in the browser of your choice.
 
 # Part II) Program Specification
 
