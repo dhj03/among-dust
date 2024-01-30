@@ -4,10 +4,10 @@ import spark.servlet.SparkApplication;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import dungeonmania.DungeonManiaController;
-import dungeonmania.exceptions.InvalidActionException;
-import dungeonmania.response.models.GenericResponseWrapper;
-import dungeonmania.util.Direction;
+import amongdust.AmongDustController;
+import amongdust.exceptions.InvalidActionException;
+import amongdust.response.models.GenericResponseWrapper;
+import amongdust.util.Direction;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 import scintilla.Scintilla;
 
 /**
- * A threadsafe wrapper around your DungeonManiaController.
+ * A threadsafe wrapper around your AmongDustController.
  * It does this by storing a series of session states
  *
  * You shouldn't need to modify this.
@@ -32,9 +32,9 @@ public class App implements SparkApplication {
             super(message);
         }
     }
-    private static volatile Map<String, DungeonManiaController> sessionStates = new HashMap<>();
+    private static volatile Map<String, AmongDustController> sessionStates = new HashMap<>();
 
-    private static synchronized DungeonManiaController getDungeonManiaController(Request request) {
+    private static synchronized AmongDustController getAmongDustController(Request request) {
         String session = request.session().id();
         if (session == null) {
             System.out.println("No Session Found... using default.");
@@ -44,7 +44,7 @@ public class App implements SparkApplication {
         if (sessionStates.containsKey(session)) {
             return sessionStates.get(session);
         } else {
-            DungeonManiaController bc = new DungeonManiaController();
+            AmongDustController bc = new AmongDustController();
             sessionStates.put(session, bc);
             return bc;
         }
@@ -59,9 +59,9 @@ public class App implements SparkApplication {
         }
     }
 
-    private static<T> GenericResponseWrapper<T> callUsingSessionAndArgument(Request request, Function<DungeonManiaController, T> runnable) {
+    private static<T> GenericResponseWrapper<T> callUsingSessionAndArgument(Request request, Function<AmongDustController, T> runnable) {
         try {
-            DungeonManiaController dmc = getDungeonManiaController(request);
+            AmongDustController dmc = getAmongDustController(request);
             synchronized (dmc) {
                 return GenericResponseWrapper.Ok(runnable.apply(dmc));
             }
@@ -88,14 +88,14 @@ public class App implements SparkApplication {
         Spark.get("/api/dungeons/", "application/json", (request, response) -> {
             // we don't *need* to globally lock this but we might as well just to keep a nice standard.
             synchronized (globalLock) {
-                return callWithWrapper(() -> DungeonManiaController.dungeons());
+                return callWithWrapper(() -> AmongDustController.dungeons());
             }
         }, gson::toJson);
 
         Spark.get("/api/configs/", "application/json", (request, response) -> {
             // we don't *need* to globally lock this but we might as well just to keep a nice standard.
             synchronized (globalLock) {
-                return callWithWrapper(() -> DungeonManiaController.configs());
+                return callWithWrapper(() -> AmongDustController.configs());
             }
         }, gson::toJson);
 

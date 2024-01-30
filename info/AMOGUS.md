@@ -1,6 +1,6 @@
 ## **Sussy Expansion Guide**
 
-A Guide to Sussy Dungeon Mania:
+A Guide to Among Dust:
 
 ---
 

@@ -1,4 +1,4 @@
-# Sussy Dungeon Mania
+# Sussy Among Dust
 
 ## Contents
 
@@ -11,7 +11,7 @@ This specification is broken into three parts:
 
 # Part I) Introduction
 
-This game is based off of the infamous Dungeon Mania (iykyk), stylised in terms of the world-famous Among Us.
+This game is based off of the infamous Among Dust (iykyk), stylised in terms of the world-famous Among Us.
 
 The easiest way to run the program is using Visual Studio Code, with the **Extension Pack for Java** and **Gradle for Java** installed. Open your cloned repository in its directory, and click `Run Java` in 'src/main/java/App.java'. A pop-up should appear in your default browser where you can play the game.
 
@@ -21,7 +21,7 @@ If no pop-up appears (as will happen in WSL since there is no `xdg-open`), navig
 
 ## 3. Rules of the Game
 
-In Dungeon Mania you control a Player and have to complete various goals within a series of dungeons to complete the game!
+In Among Dust you control a Player and have to complete various goals within a series of dungeons to complete the game!
 
 The simplest form of such a puzzle is a maze, where the Player must find their way from the starting point to the exit.
 
@@ -478,7 +478,7 @@ Where `<goal>` is one of `"enemies"`, `"boulders"`, `"treasure"`, `"exit"`, or a
 
 ## 6. Interface
 
-The layer of abstraction is at the level of the `DungeonManiaController`.
+The layer of abstraction is at the level of the `AmongDustController`.
 
 The controller methods interact with a HTTP layer in the form of a web server.
 
@@ -927,7 +927,7 @@ We have handled potential concurrency issues by synchronising all endpoints - yo
 
 The only two exceptions throwable by the Controller are:
 * `IllegalArgumentException` (an builtin unchecked exception) on the specified conditions; and
-* `InvalidActionException` (a custom-defined checked exception inside `src/main/java/dungeonmania/exceptions`).
+* `InvalidActionException` (a custom-defined checked exception inside `src/main/java/amongdust/exceptions`).
 
 ## 7. Frontend and Customisations
 
@@ -946,12 +946,12 @@ The only two exceptions throwable by the Controller are:
 <tr>
 <td>
 
-`DungeonManiaController.java`
+`AmongDustController.java`
 
 </td>
 <td>
 
-`src/main/java/dungeonmania/DungeonManiaController.java`
+`src/main/java/amongdust/AmongDustController.java`
 
 </td>
 <td>
@@ -973,7 +973,7 @@ Contains one method for each command you need to implement.
 
 </td>
 <td>
-Runs a server for Dungeon Mania.
+Runs a server for Among Dust.
 </td>
 <td>
 <b>No.</b>
@@ -984,7 +984,7 @@ Runs a server for Dungeon Mania.
 `Position.java`, `Direction.java`, and `FileLoader.java` </td>
 <td>
 
-`src/main/java/dungeonmania/util/Position.java`, `src/main/java/dungeonmania/util/FileLoader.java`, and `src/main/java/dungeonmania/util/Direction.java`
+`src/main/java/amongdust/util/Position.java`, `src/main/java/amongdust/util/FileLoader.java`, and `src/main/java/amongdust/util/Direction.java`
 
 </td>
 <td>
@@ -1002,7 +1002,7 @@ See Section 6.1.
 </td>
 <td>
 
-`src/main/java/dungeonmania/response/models/`
+`src/main/java/amongdust/response/models/`
 
 </td>
 <td>
@@ -1040,7 +1040,7 @@ Contains a small custom built wrapper around Spark-Java for running a web server
 </td>
 <td>
 
-`src/main/java/dungeonmania/exceptions`
+`src/main/java/amongdust/exceptions`
 
 </td>
 <td>

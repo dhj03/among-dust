@@ -73,9 +73,9 @@ jacocoTestReport {
             fileTree(dir: it,
                     exclude: ['**App**',
                               'scintilla/**',
-                              'dungeonmania/util/**', 
-                              'dungeonmania/response/models/**', 
-                              'dungeonmania/exceptions/**'])
+                              'amongdust/util/**', 
+                              'amongdust/response/models/**', 
+                              'amongdust/exceptions/**'])
         })
     }
 
