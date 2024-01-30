@@ -1,4 +1,4 @@
-# Sussy Among Dust
+# Among Dust
 
 ## Contents
 
@@ -11,7 +11,7 @@ This specification is broken into three parts:
 
 # Part I) Introduction
 
-This game is based off of the infamous Among Dust (iykyk), stylised in terms of the world-famous Among Us.
+This game is a dungeon-crawler stylised in terms of the world-famous Among Us.
 
 The easiest way to run the program is using Visual Studio Code, with the **Extension Pack for Java** and **Gradle for Java** installed. Open your cloned repository in its directory, and click `Run Java` in 'src/main/java/App.java'. A pop-up should appear in your default browser where you can play the game.
 
