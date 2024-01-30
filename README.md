@@ -432,10 +432,6 @@ Where `<goal>` is one of `"enemies"`, `"boulders"`, `"treasure"`, `"exit"`, or a
 
 ## 5. Configuration Files
 
-In `config_template.json` we have specified the template for a configuration file. This file is important as it specifies internal game mechanics which will affect the external behaviour of your application. Rather than hard coding these constants into your classes, you must instead read in these values from the specified file when the game is created. 
-
-During automarking, we will be providing our own configuration files with each test dungeon - this allows our tests to set parameters that should ensure behaviours are produced without ambiguity. For this reason, if you do not read in the values correctly, you will likely fail a large number of our autotests.
-
 | JSON Format                     | Description                                                                                                                                  |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | `ally_attack`                  | Attack bonus each ally gives to the player.                                                                                                  |
@@ -517,7 +513,7 @@ public DungeonResponse(String dungeonId,
     <li><code>inventory</code> is the Player's current inventory</li>
     <li><code>buildables</code> is a list of buildable item types that the player can build, given their current inventory and game state</li>
     <li><code>battles</code> is the list of battles that has occured in total in the game so far (see <code>BattleResponse</code>), in the order that they occurred</li>
-    <li><code>goals</code> is a string containing the goals yet to be completed. An empty string denotes the game has been won. Each goal in the string is preceded with a colon <code>:</code> and is one of the four basic goals listed in Section 4.2. How you represent conjunctions (AND) and disjunuctions (OR) is up to you, as the frontend will simply render your string with the goals as images. We will only check for the goal strings in our tests (e.g. <code>:exit</code>). An example of the <code>goals</code> string is <code>":exit AND (:treasure OR :enemies)"</code></li>
+    <li><code>goals</code> is a string containing the goals yet to be completed. An empty string denotes the game has been won. Each goal in the string is preceded with a colon <code>:</code> and is one of the four basic goals listed in Section 4.2. An example of the <code>goals</code> string is <code>":exit AND (:treasure OR :enemies)"</code></li>
 </ul>
 
 </td>
@@ -604,7 +600,7 @@ public Position(int x, int y, int layer)
 <td>
 <ul>
     <li><code>x</code>, <code>y</code> are the co-ordinates of the cell (the top-left cell is 0,0)</li>
-    <li><code>layer</code> is the Z-position of the entity on the screen (a higher layer is "in front" of a lower layer visually). The Z-position only matters for frontend rendering and is not something we will test.</li>
+    <li><code>layer</code> is the Z-position of the entity on the screen (a higher layer is "in front" of a lower layer visually). The Z-position only matters for frontend rendering.</li>
 </ul>
 </td>
 </tr>
@@ -932,8 +928,6 @@ We have handled potential concurrency issues by synchronising all endpoints - yo
 The only two exceptions throwable by the Controller are:
 * `IllegalArgumentException` (an builtin unchecked exception) on the specified conditions; and
 * `InvalidActionException` (a custom-defined checked exception inside `src/main/java/dungeonmania/exceptions`).
-
-You can throw them in any order you like, we will not test any input that would fit multiple exceptions at the same time.
 
 ## 7. Frontend and Customisations
 
